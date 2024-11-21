@@ -26,7 +26,6 @@ namespace WpfKeyHookSample
 
         public IntPtr Handle => new WindowInteropHelper(this).Handle;
 
-
         private IntPtr WindowProcedure(IntPtr hwnd, int msg, IntPtr wParam, IntPtr lParam, ref bool handled)
         {
             if (msg == WM_USERMESSAGE) {

@@ -1,0 +1,48 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35506.116 d17.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfKeyHookSample", "WpfKeyHookSample\WpfKeyHookSample.csproj", "{156E9145-2496-469E-9B88-75B45C47A4BF}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "KeyHook", "KeyHook\KeyHook.vcxproj", "{CB90C36C-F385-473C-A09A-88A4F70E3014}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{156E9145-2496-469E-9B88-75B45C47A4BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{156E9145-2496-469E-9B88-75B45C47A4BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{156E9145-2496-469E-9B88-75B45C47A4BF}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{156E9145-2496-469E-9B88-75B45C47A4BF}.Debug|x64.Build.0 = Debug|Any CPU
+		{156E9145-2496-469E-9B88-75B45C47A4BF}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{156E9145-2496-469E-9B88-75B45C47A4BF}.Debug|x86.Build.0 = Debug|Any CPU
+		{156E9145-2496-469E-9B88-75B45C47A4BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{156E9145-2496-469E-9B88-75B45C47A4BF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{156E9145-2496-469E-9B88-75B45C47A4BF}.Release|x64.ActiveCfg = Release|Any CPU
+		{156E9145-2496-469E-9B88-75B45C47A4BF}.Release|x64.Build.0 = Release|Any CPU
+		{156E9145-2496-469E-9B88-75B45C47A4BF}.Release|x86.ActiveCfg = Release|Any CPU
+		{156E9145-2496-469E-9B88-75B45C47A4BF}.Release|x86.Build.0 = Release|Any CPU
+		{CB90C36C-F385-473C-A09A-88A4F70E3014}.Debug|Any CPU.ActiveCfg = Debug|x64
+		{CB90C36C-F385-473C-A09A-88A4F70E3014}.Debug|Any CPU.Build.0 = Debug|x64
+		{CB90C36C-F385-473C-A09A-88A4F70E3014}.Debug|x64.ActiveCfg = Debug|x64
+		{CB90C36C-F385-473C-A09A-88A4F70E3014}.Debug|x64.Build.0 = Debug|x64
+		{CB90C36C-F385-473C-A09A-88A4F70E3014}.Debug|x86.ActiveCfg = Debug|Win32
+		{CB90C36C-F385-473C-A09A-88A4F70E3014}.Debug|x86.Build.0 = Debug|Win32
+		{CB90C36C-F385-473C-A09A-88A4F70E3014}.Release|Any CPU.ActiveCfg = Release|x64
+		{CB90C36C-F385-473C-A09A-88A4F70E3014}.Release|Any CPU.Build.0 = Release|x64
+		{CB90C36C-F385-473C-A09A-88A4F70E3014}.Release|x64.ActiveCfg = Release|x64
+		{CB90C36C-F385-473C-A09A-88A4F70E3014}.Release|x64.Build.0 = Release|x64
+		{CB90C36C-F385-473C-A09A-88A4F70E3014}.Release|x86.ActiveCfg = Release|Win32
+		{CB90C36C-F385-473C-A09A-88A4F70E3014}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

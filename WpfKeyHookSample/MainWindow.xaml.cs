@@ -1,4 +1,6 @@
-﻿using System.Diagnostics;
+﻿#define GLOBAL_KEY_HOOK_ENABLED
+
+using System.Diagnostics;
 using System.Runtime.InteropServices;
 using System.Windows;
 using System.Windows.Interop;
@@ -9,21 +11,27 @@ namespace WpfKeyHookSample
     {
         const uint WM_USER        = 0x0400;
         const uint WM_USERMESSAGE = WM_USER + 50;
+
+#if GLOBAL_KEY_HOOK_ENABLED
         const int  virtualKey     = 'A';
 
         [DllImport("KeyHook.dll")]
         public static extern void Set(IntPtr hWnd, int virtualKey);
         [DllImport("KeyHook.dll")]
         public static extern void Reset();
+#endif
 
         public MainWindow()
         {
             InitializeComponent();
 
+#if GLOBAL_KEY_HOOK_ENABLED
             var handle = new WindowInteropHelper(this).EnsureHandle();
             HwndSource.FromHwnd(handle).AddHook(new HwndSourceHook(WindowProcedure));
+#endif
         }
 
+#if GLOBAL_KEY_HOOK_ENABLED
         public IntPtr Handle => new WindowInteropHelper(this).Handle;
 
         private IntPtr WindowProcedure(IntPtr hwnd, int msg, IntPtr wParam, IntPtr lParam, ref bool handled)
@@ -51,8 +59,20 @@ namespace WpfKeyHookSample
                 Show();
             Activate();
         }
+#endif
 
-        private void OnLoaded(object sender, RoutedEventArgs e) => Set(Handle, virtualKey);
-        private void OnClosed(object sender, EventArgs       e) => Reset();
+        private void OnLoaded(object sender, RoutedEventArgs e)
+        {
+#if GLOBAL_KEY_HOOK_ENABLED
+            Set(Handle, virtualKey);
+#endif
+        }
+
+        private void OnClosed(object sender, EventArgs       e)
+        {
+#if GLOBAL_KEY_HOOK_ENABLED
+            Reset();
+#endif
+        }
     }
 }

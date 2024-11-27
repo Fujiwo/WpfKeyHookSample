@@ -1,18 +1,21 @@
 ﻿#define GLOBAL_KEY_HOOK_ENABLED
 
+using System.Windows;
+
+#if GLOBAL_KEY_HOOK_ENABLED
 using System.Diagnostics;
 using System.Runtime.InteropServices;
-using System.Windows;
 using System.Windows.Interop;
+#endif
 
 namespace WpfKeyHookSample
 {
     public partial class MainWindow : Window
     {
+#if GLOBAL_KEY_HOOK_ENABLED
         const uint WM_USER        = 0x0400;
         const uint WM_USERMESSAGE = WM_USER + 50;
 
-#if GLOBAL_KEY_HOOK_ENABLED
         const int  virtualKey     = 'A';
 
         [DllImport("KeyHook.dll")]
